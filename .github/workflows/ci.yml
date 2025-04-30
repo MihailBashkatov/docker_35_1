@@ -33,7 +33,8 @@ jobs:
 
       - name: Run tests
         env:
-          SECRET_KEY: 03fb524557178c6e3c0a9670c26a380ff34c73c81efac0eeba
+          SECRET_KEY: e22a4aa8b1dc992d02807d522ecac5c64c8dc40bbc3e8f800b
+
         run: |
           python manage.py test
 
