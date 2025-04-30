@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(override=True)  # loading data from file .env
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY") #vali
+SECRET_KEY = os.getenv("SECRET_KEY") #valid
 # SECURITY WARNING: don"t run with debug turned on in production!
 DEBUG = True if os.getenv("DEBUG") == "True" else False
 
