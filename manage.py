@@ -3,10 +3,13 @@
 import os
 import sys
 
+from config import settings
+
 
 def main():
     """Run administrative tasks."""
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+    print(settings.DATABASES['default']['NAME'])
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
