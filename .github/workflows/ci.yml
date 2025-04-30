@@ -29,7 +29,7 @@ jobs:
 
       - name: Run migrate
         env:
-          NAME: ${{ secrets.SECRET_KEY }}
+          NAME: online_course_project
           POSTGRES_USER: ${{ secrets.SECRET_KEY }}
           POSTGRES_PASSWORD: ${{ secrets.SECRET_KEY }}
           POSTGRES_HOST: ${{ secrets.SECRET_KEY }}
