@@ -28,13 +28,13 @@ jobs:
             pip install -r requirements.txt
 
       - name: Run migrate
+        env:
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
         run: python manage.py migrate
 
 
       - name: Run tests
         env:
-          SECRET_KEY: e22a4aa8b1dc992d02807d522ecac5c64c8dc40bbc3e8f800b
-
-        run: |
-          python manage.py test
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        run: python manage.py test
 
