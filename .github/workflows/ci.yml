@@ -23,7 +23,7 @@ jobs:
       - name: Run migrations
         env:
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          POSTGRES_HOST: localhost
+          POSTGRES_HOST: db
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: library_password
           POSTGRES_DB: online_course_project
@@ -31,15 +31,3 @@ jobs:
 
       - name: Run tests
         run: python manage.py test
-  build:
-    runs-on: ubuntu-latest
-
-    services:
-      postgres:
-        image: postgres:latest
-        ports:
-          - 5432:5432
-        env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: library_password
-          POSTGRES_DB: online_course_project
