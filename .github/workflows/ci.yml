@@ -24,7 +24,6 @@ jobs:
       env:
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
         POSTGRES_HOST: localhost
-        POSTGRES_DB: online_course_project
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: library_password
       run: python manage.py migrate
