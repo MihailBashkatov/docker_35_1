@@ -26,6 +26,7 @@ jobs:
         POSTGRES_HOST: localhost
         POSTGRES_USER: postgres
         POSTGRES_PASSWORD: library_password
+        POSTGRES_DB: online_course_project
       run: python manage.py migrate
 
     - name: Run tests
